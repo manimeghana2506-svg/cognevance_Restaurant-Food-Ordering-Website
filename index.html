@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Savoria - Fine Dining & Artisan Kitchen. Experience award-winning cuisine, handcrafted pastas, prime dry-aged steaks, and fast gourmet delivery.">
+  <title>Savoria | Fine Dining & Gourmet Food Ordering</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Promo Bar -->
+  <div class="announcement-bar">
+    <i class="fa-solid fa-sparkles" style="color: var(--color-gold); margin-right: 0.5rem;"></i>
+    <span>Complimentary Truffle Dessert on orders above $60! Use code:</span>
+    <span class="announcement-code" id="announcementPromoCode" title="Click to copy promo code">SAVOR20</span>
+  </div>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div class="logo-text">SAVORIA<span>.</span></div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Our Menu</a>
+        <a href="#offers" class="nav-link">Offers</a>
+        <a href="#about" class="nav-link">About Chef</a>
+        <a href="#reservation" class="nav-link">Reservation</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <div class="cart-btn-wrapper">
+          <button class="nav-cart-btn" id="openCartBtn" aria-label="View Shopping Cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cartBadgeCount">0</span>
+          </button>
+        </div>
+
+        <a href="#reservation" class="btn btn-primary btn-sm btn-book-table">
+          <i class="fa-regular fa-calendar-check"></i> Book Table
+        </a>
+
+        <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Mobile Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+        <div class="logo-text">SAVORIA<span>.</span></div>
+      </div>
+      <button class="cart-close-btn" id="closeMobileNavBtn" aria-label="Close Mobile Navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link active">Home</a>
+      <a href="#menu" class="mobile-nav-link">Interactive Menu</a>
+      <a href="#offers" class="mobile-nav-link">Special Deals</a>
+      <a href="#about" class="mobile-nav-link">Our Heritage</a>
+      <a href="#reservation" class="mobile-nav-link">Book a Table</a>
+      <a href="#testimonials" class="mobile-nav-link">Guest Reviews</a>
+      <a href="#contact" class="mobile-nav-link">Hours & Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="#reservation" class="btn btn-primary" id="mobileNavReserveBtn">Reserve a Table</a>
+      <div class="footer-social-links" style="justify-content: center;">
+        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION & SLIDER -->
+    <section class="hero" id="home">
+      <div class="hero-slider-container">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80');"></div>
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1920&q=80');"></div>
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-crown" style="color: var(--color-gold);"></i>
+          Award-Winning Michelin Recommended Kitchen
+        </div>
+        <h1 class="hero-title">
+          Culinary Artistry, <br>
+          <span class="gold-text">Crafted for Connoisseurs.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Immerse your senses in hand-rolled pasta, 45-day dry-aged cuts, and artisanal wood-fired creations. Dine with us in luxury or savor gourmet delivery at your doorstep.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-utensils"></i> Explore Full Menu
+          </a>
+          <a href="#reservation" class="btn btn-secondary btn-lg">
+            <i class="fa-regular fa-calendar-check"></i> Reserve a Table
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>4.9 <i class="fa-solid fa-star" style="font-size: 1.1rem; color: var(--color-gold);"></i></h3>
+            <p>2,800+ Verified Diners</p>
+          </div>
+          <div class="stat-item">
+            <h3>28 Min</h3>
+            <p>Avg. Gourmet Delivery</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Certified Organic Sourcing</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="hero-controls">
+        <button class="hero-control-btn" id="heroPrevBtn" aria-label="Previous Slide">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="hero-dots" id="heroDots">
+          <div class="hero-dot active" data-slide="0"></div>
+          <div class="hero-dot" data-slide="1"></div>
+          <div class="hero-dot" data-slide="2"></div>
+        </div>
+        <button class="hero-control-btn" id="heroNextBtn" aria-label="Next Slide">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- SPECIAL OFFERS & PROMOTIONS -->
+    <section class="section-deals" id="offers">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tagline">Exclusive Privileges</span>
+          <h2 class="section-title">Limited Time Gourmet Deals</h2>
+          <p class="section-desc">Experience our signature culinary highlights with exclusive perks, chef promotions, and savings.</p>
+        </div>
+
+        <div class="deals-grid" id="dealsGrid">
+          <!-- Populated dynamically from menu-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FOOD MENU -->
+    <section class="section-menu" id="menu">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tagline">Gastronomic Excellence</span>
+          <h2 class="section-title">Our Seasonal Menu</h2>
+          <p class="section-desc">Each recipe is meticulously curated by Master Chef Lorenzo and executed with farm-fresh organic ingredients.</p>
+        </div>
+
+        <!-- Menu Filter, Search & Sort Bar -->
+        <div class="menu-controls">
+          <div class="menu-search-sort-bar">
+            <!-- Search -->
+            <div class="menu-search-wrapper">
+              <i class="fa-solid fa-magnifying-glass menu-search-icon"></i>
+              <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search dish, ingredient, or craving...">
+              <button class="menu-search-clear" id="menuSearchClear" aria-label="Clear Search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Sort dropdown -->
+            <div class="menu-sort-wrapper">
+              <label for="menuSortSelect" class="menu-sort-label">Sort By:</label>
+              <select id="menuSortSelect" class="menu-sort-select">
+                <option value="recommended">Chef Recommended</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Category Navigation Tabs -->
+          <div class="menu-categories" id="categoryTabs">
+            <button class="category-tab active" data-category="all">
+              <i class="fa-solid fa-border-all"></i> All Dishes
+            </button>
+            <button class="category-tab" data-category="starters">
+              <i class="fa-solid fa-plate-wheat"></i> Starters & Bites
+            </button>
+            <button class="category-tab" data-category="mains">
+              <i class="fa-solid fa-drumstick-bite"></i> Signature Mains
+            </button>
+            <button class="category-tab" data-category="pasta-pizza">
+              <i class="fa-solid fa-pizza-slice"></i> Pasta & Pizza
+            </button>
+            <button class="category-tab" data-category="burgers">
+              <i class="fa-solid fa-burger"></i> Wagyu & Burgers
+            </button>
+            <button class="category-tab" data-category="desserts">
+              <i class="fa-solid fa-ice-cream"></i> Decadent Desserts
+            </button>
+            <button class="category-tab" data-category="drinks">
+              <i class="fa-solid fa-martini-glass-citrus"></i> Artisan Drinks
+            </button>
+          </div>
+
+          <!-- Dietary Filter Chips -->
+          <div class="dietary-filters">
+            <button class="dietary-chip active" data-diet="all">All Dietary</button>
+            <button class="dietary-chip" data-diet="veg">🌱 Vegetarian</button>
+            <button class="dietary-chip" data-diet="vegan">🌿 100% Vegan</button>
+            <button class="dietary-chip" data-diet="gf">🌾 Gluten-Free</button>
+            <button class="dietary-chip" data-diet="spicy">🌶️ Spicy</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Results Counter -->
+        <div class="menu-results-count" id="menuResultsCount">
+          Showing 20 artisan creations
+        </div>
+
+        <!-- Food Grid Container -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT RESTAURANT & CHEF -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Image Collage -->
+          <div class="about-images-wrapper">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Savoria Kitchen interior" class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Master Chef Lorenzo" class="about-img-float">
+            <div class="about-floating-experience">
+              <div class="years">24+</div>
+              <div class="text">Years of Culinary Passion</div>
+            </div>
+          </div>
+
+          <!-- Narrative Content -->
+          <div class="about-content">
+            <span class="section-tagline">Our Heritage & Story</span>
+            <h2 class="section-title">Where Tradition Meets Contemporary Passion</h2>
+            <p class="about-text">
+              Founded in the historic dining district, Savoria was envisioned as a sanctuary for heartfelt gastronomic exploration. Under the guidance of Executive Chef Lorenzo Moretti, our kitchen honors ancestral Italian slow-cooking while embracing avant-garde European gastronomy.
+            </p>
+            <p class="about-text">
+              We cultivate deep relationships with regional farmers and line-caught fisheries, ensuring every dish reflects seasonal purity, ethical sustainability, and peerless flavor depth.
+            </p>
+
+            <div class="about-pillars">
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div>
+                  <h4>100% Organic Produce</h4>
+                  <p>Handpicked daily from biodynamic regional farms.</p>
+                </div>
+              </div>
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <div>
+                  <h4>Wood-Fired Hearth</h4>
+                  <p>Ancient olive wood ovens burning at 900°F.</p>
+                </div>
+              </div>
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                <div>
+                  <h4>Master Cellar</h4>
+                  <p>Over 450 curated Old & New World vintage reserves.</p>
+                </div>
+              </div>
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon"><i class="fa-solid fa-box"></i></div>
+                <div>
+                  <h4>Eco-Luxury Delivery</h4>
+                  <p>100% compostable, temperature-locking thermal packaging.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chef-signature-wrap">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=150&q=80" alt="Chef Lorenzo" class="chef-avatar">
+              <div class="chef-details">
+                <h5>Lorenzo Moretti</h5>
+                <span>Executive Chef & Co-Founder • 3-Star Michelin Veteran</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE RESERVATION SECTION -->
+    <section class="section-reservation" id="reservation">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3.5rem;">
+          <span class="section-tagline">Intimate & Celebratory Dining</span>
+          <h2 class="section-title">Reserve Your Table</h2>
+          <p class="section-desc">Experience an unforgettable evening. Early reservation is recommended for prime dinner seatings.</p>
+        </div>
+
+        <div class="reservation-card-wrapper">
+          <!-- Information Sidebar -->
+          <div class="reservation-info-pane">
+            <div class="reservation-info-header">
+              <h3>The Savoria Experience</h3>
+              <p>Whether it is an anniversary, corporate milestone, or casual rendezvous, our dedicated hosts curate every nuance of your dining journey.</p>
+            </div>
+
+            <div class="reservation-perks">
+              <div class="reservation-perk-item">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <span>Complimentary house spritz for parties of 4 or more</span>
+              </div>
+              <div class="reservation-perk-item">
+                <i class="fa-solid fa-square-parking"></i>
+                <span>Complimentary valet parking at front entrance</span>
+              </div>
+              <div class="reservation-perk-item">
+                <i class="fa-solid fa-cake-candles"></i>
+                <span>Custom pastry inscription for celebratory occasions</span>
+              </div>
+              <div class="reservation-perk-item">
+                <i class="fa-solid fa-music"></i>
+                <span>Live acoustic jazz performances every Thursday - Saturday</span>
+              </div>
+            </div>
+
+            <div class="reservation-direct-contact">
+              <p>For private dining or buyouts (12+ guests):</p>
+              <a href="tel:5558493920"><i class="fa-solid fa-phone" style="font-size: 1rem; margin-right: 0.5rem;"></i> (555) 849-3920</a>
+            </div>
+          </div>
+
+          <!-- Reservation Form -->
+          <div class="reservation-form-pane">
+            <form id="tableReservationForm">
+              <div class="reservation-form-grid">
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="resName">Full Name *</label>
+                  <input type="text" id="resName" class="form-control" placeholder="e.g. Eleanor Vance" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="resPhone">Phone Number *</label>
+                  <input type="tel" id="resPhone" class="form-control" placeholder="(555) 000-0000" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="resEmail">Email Address *</label>
+                  <input type="email" id="resEmail" class="form-control" placeholder="eleanor@example.com" required>
+                </div>
+
+                <!-- Date -->
+                <div class="form-group">
+                  <label class="form-label" for="resDate">Reservation Date *</label>
+                  <input type="date" id="resDate" class="form-control" required>
+                </div>
+
+                <!-- Time Slot -->
+                <div class="form-group">
+                  <label class="form-label" for="resTime">Preferred Time *</label>
+                  <select id="resTime" class="form-control" required>
+                    <option value="">Select Dining Time</option>
+                    <option value="12:00 PM">12:00 PM (Lunch)</option>
+                    <option value="1:30 PM">1:30 PM (Lunch)</option>
+                    <option value="5:30 PM">5:30 PM (Early Dinner)</option>
+                    <option value="6:45 PM">6:45 PM (Prime Dinner)</option>
+                    <option value="8:00 PM">8:00 PM (Prime Dinner)</option>
+                    <option value="9:15 PM">9:15 PM (Late Evening)</option>
+                  </select>
+                </div>
+
+                <!-- Guests count -->
+                <div class="form-group">
+                  <label class="form-label" for="resGuests">Number of Guests *</label>
+                  <select id="resGuests" class="form-control" required>
+                    <option value="1">1 Guest (Solo Dining)</option>
+                    <option value="2" selected>2 Guests (Romantic / Intimate)</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="6">6 Guests (Small Celebration)</option>
+                    <option value="8">8 Guests (Dinner Party)</option>
+                    <option value="10">10+ Guests (Large Group)</option>
+                  </select>
+                </div>
+
+                <!-- Seating Area Preference -->
+                <div class="form-group">
+                  <label class="form-label" for="resArea">Seating Preference</label>
+                  <select id="resArea" class="form-control">
+                    <option value="Main Dining Hall">Main Dining Hall (Chandelier View)</option>
+                    <option value="Outdoor Terrace">Outdoor Garden Terrace (Heated)</option>
+                    <option value="Chef's Counter">Chef's Interactive Counter</option>
+                    <option value="Wine Cellar Alcove">Private Wine Cellar Alcove</option>
+                  </select>
+                </div>
+
+                <!-- Special Requests -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="resNotes">Occasion & Dietary Notes</label>
+                  <textarea id="resNotes" class="form-control" placeholder="Anniversary, birthday cake inscription, severe allergies, or specific requests..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg reservation-submit-btn">
+                <i class="fa-solid fa-calendar-check"></i> Confirm Reservation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS & TESTIMONIALS -->
+    <section class="section-testimonials" id="testimonials">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tagline">Gourmet Endorsements</span>
+          <h2 class="section-title">Words from Our Diners</h2>
+          <p class="section-desc">Over 2,800 guests have rated Savoria five stars across culinary guides and local food reviews.</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonialsGrid">
+          <!-- Populated from menu-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS, LOCATION & CONTACT US -->
+    <section class="section-info-contact" id="contact">
+      <div class="container">
+        <div class="info-contact-grid">
+          <!-- Restaurant Hours & Location Card -->
+          <div class="hours-location-card">
+            <h3>Visit Savoria</h3>
+            <div class="hours-list">
+              <div class="hours-row">
+                <span class="day">Monday – Thursday</span>
+                <span class="time">12:00 PM – 10:30 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="day">Friday & Saturday</span>
+                <span class="time">12:00 PM – 11:30 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="day">Sunday Brunch & Dinner</span>
+                <span class="time">11:00 AM – 10:00 PM</span>
+              </div>
+            </div>
+
+            <div class="location-details-list">
+              <div class="location-detail-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>742 Grand Boulevard, Culinary District</strong>
+                  <p>Metropolis, NY 10012 (Opposite Symphony Hall)</p>
+                </div>
+              </div>
+              <div class="location-detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Direct Inquiries & Curbside</strong>
+                  <p>+1 (555) 849-3920</p>
+                </div>
+              </div>
+              <div class="location-detail-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong>VIP Concierge & Events</strong>
+                  <p>reservations@savoria-bistro.com</p>
+                </div>
+              </div>
+              <div class="location-detail-item">
+                <i class="fa-solid fa-square-parking"></i>
+                <div>
+                  <strong>Valet & Transit</strong>
+                  <p>Complimentary valet service available on entrance driveway.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Us Form -->
+          <div class="contact-form-card">
+            <h3>Send a Message</h3>
+            <p>Have an inquiry about private buyouts, customized catering, or dietary consulting? Drop us a line.</p>
+            <form id="contactUsForm">
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="Eleanor Vance" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="eleanor@example.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label class="form-label" for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" class="form-control" placeholder="Private Event Inquiry / Feedback">
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label class="form-label" for="contactMessage">Your Message *</label>
+                <textarea id="contactMessage" class="form-control" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-regular fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER VIP SECTION -->
+    <section class="section-newsletter">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="badge badge-gold" style="margin-bottom: 1rem;">The Savoria Circle</span>
+          <h3>Join Our Private Gastronomy Club</h3>
+          <p>Subscribe to receive secret off-menu tasting invites, private chef pairings, and an immediate $15 voucher code for your next order.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-sparkles"></i> Claim Voucher
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="logo-text">SAVORIA<span>.</span></div>
+          </div>
+          <p class="footer-bio">
+            Savoria represents modern fine dining, Michelin heritage, and artisan culinary creations delivered straight to your table or doorstep in peak freshness.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Tripadvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home" class="footer-nav-link">Home</a></li>
+            <li><a href="#menu" class="footer-nav-link">Our Seasonal Menu</a></li>
+            <li><a href="#offers" class="footer-nav-link">Special Privileges</a></li>
+            <li><a href="#about" class="footer-nav-link">About Chef Lorenzo</a></li>
+            <li><a href="#reservation" class="footer-nav-link">Table Reservation</a></li>
+          </ul>
+        </div>
+
+        <!-- Dining Categories -->
+        <div class="footer-col">
+          <h4>Menu Highlights</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#menu" class="footer-nav-link" data-cat-link="mains">Dry-Aged Steaks</a></li>
+            <li><a href="#menu" class="footer-nav-link" data-cat-link="pasta-pizza">Hand-Rolled Pastas</a></li>
+            <li><a href="#menu" class="footer-nav-link" data-cat-link="pasta-pizza">Wood-Fired Pizzas</a></li>
+            <li><a href="#menu" class="footer-nav-link" data-cat-link="burgers">Wagyu Truffle Burgers</a></li>
+            <li><a href="#menu" class="footer-nav-link" data-cat-link="drinks">Mixology Cocktails</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours & Hospitality -->
+        <div class="footer-col">
+          <h4>Hospitality</h4>
+          <ul class="footer-nav-list">
+            <li><span style="color: var(--color-gold-light);">Mon - Thu:</span> 12:00 PM - 10:30 PM</li>
+            <li><span style="color: var(--color-gold-light);">Fri - Sat:</span> 12:00 PM - 11:30 PM</li>
+            <li><span style="color: var(--color-gold-light);">Sun Brunch:</span> 11:00 AM - 10:00 PM</li>
+            <li style="margin-top: 0.5rem; color: var(--color-text-secondary);"><i class="fa-solid fa-location-dot" style="color: var(--color-gold); margin-right: 0.4rem;"></i> 742 Grand Blvd, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Savoria Gourmet Kitchen & Bistro. All Rights Reserved.</p>
+        <p>Crafted with culinary passion, high performance & modern accessibility.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CART SLIDE-OVER DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+      <div class="cart-header">
+        <div class="cart-header-title" id="cartDrawerTitle">
+          <i class="fa-solid fa-bag-shopping" style="color: var(--color-gold);"></i>
+          <span>Your Gourmet Bag (<span id="cartHeaderQty">0</span>)</span>
+        </div>
+        <button class="cart-close-btn" id="closeCartBtn" aria-label="Close Shopping Bag">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Free Delivery Progress Bar -->
+      <div class="cart-free-delivery-bar">
+        <div id="freeDeliveryMessage">Add $50.00 more for Free Priority Delivery!</div>
+        <div class="free-delivery-progress">
+          <div class="free-delivery-progress-fill" id="freeDeliveryFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items List Container -->
+      <div class="cart-items-body" id="cartItemsList">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Cart Calculation & Checkout Footer -->
+      <div class="cart-footer" id="cartFooter">
+        <!-- Promo Coupon Form -->
+        <div class="cart-promo-form" id="cartPromoFormWrap">
+          <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Promo code (e.g. SAVOR20)">
+          <button class="cart-promo-btn" id="cartApplyPromoBtn">Apply</button>
+        </div>
+        <div id="appliedPromoBadgeWrap"></div>
+
+        <!-- Price Breakdown -->
+        <div class="cart-breakdown">
+          <div class="cart-breakdown-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotalAmount">$0.00</span>
+          </div>
+          <div class="cart-breakdown-row" id="cartDiscountRow" style="display: none; color: var(--color-success);">
+            <span>Discount (<span id="cartDiscountCodeLabel"></span>)</span>
+            <span id="cartDiscountAmount">-$0.00</span>
+          </div>
+          <div class="cart-breakdown-row">
+            <span>Estimated Tax (8%)</span>
+            <span id="cartTaxAmount">$0.00</span>
+          </div>
+          <div class="cart-breakdown-row">
+            <span>Delivery Fee</span>
+            <span id="cartDeliveryFeeAmount">$4.99</span>
+          </div>
+          <div class="cart-breakdown-row total-row">
+            <span>Estimated Total</span>
+            <span class="total-amount" id="cartGrandTotal">$0.00</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg cart-checkout-btn" id="cartProceedCheckoutBtn">
+          Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOD QUICK VIEW MODAL ==================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close Dish Details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="quickview-img-wrap">
+        <img src="" alt="" class="quickview-img" id="quickViewImage">
+        <span class="food-badge" id="quickViewBadge" style="position: absolute; top: 1rem; left: 1rem;"></span>
+      </div>
+
+      <div class="quickview-content">
+        <div class="quickview-header">
+          <div>
+            <h3 class="quickview-title" id="quickViewTitle"></h3>
+            <div class="food-rating" style="margin-top: 0.35rem;">
+              <span id="quickViewRatingStars"></span>
+              <span id="quickViewRatingScore" style="color: #fff; margin-left: 0.4rem;"></span>
+              <span style="color: var(--color-text-muted); font-size: 0.85rem;" id="quickViewReviewCount"></span>
+            </div>
+          </div>
+          <div class="quickview-price" id="quickViewPrice"></div>
+        </div>
+
+        <p class="quickview-desc" id="quickViewDescription"></p>
+
+        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--color-text-secondary);">
+          <div><i class="fa-regular fa-clock" style="color: var(--color-gold); margin-right: 0.35rem;"></i> Prep Time: <strong id="quickViewPrep" style="color: #fff;"></strong></div>
+          <div><i class="fa-solid fa-fire" style="color: var(--color-accent); margin-right: 0.35rem;"></i> Calories: <strong id="quickViewCalories" style="color: #fff;"></strong></div>
+        </div>
+
+        <div class="quickview-section-label">Ingredients & Sourcing</div>
+        <div class="ingredients-tags" id="quickViewIngredients"></div>
+
+        <div class="quickview-section-label">Allergen Notice</div>
+        <div class="ingredients-tags" id="quickViewAllergens" style="margin-bottom: 1.5rem;"></div>
+
+        <!-- Customizations container -->
+        <div id="quickViewCustomizations"></div>
+
+        <!-- Add to cart bar in quickview -->
+        <div class="quickview-actions">
+          <div class="cart-item-qty-controls" style="padding: 0.5rem 0.85rem;">
+            <button class="qty-btn" id="quickViewMinusBtn" aria-label="Decrease Quantity"><i class="fa-solid fa-minus"></i></button>
+            <span class="qty-count" id="quickViewQtyCount" style="min-width: 28px; font-size: 1rem;">1</span>
+            <button class="qty-btn" id="quickViewPlusBtn" aria-label="Increase Quantity"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <button class="btn btn-primary" id="quickViewAddToCartBtn" style="flex: 1;">
+            <i class="fa-solid fa-plus"></i> Add to Order • <span id="quickViewComputedTotal"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT & ORDER CONFIRMATION MODAL ==================== -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-container checkout-modal-container" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+      <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close Checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Step Indicator -->
+      <div class="checkout-steps">
+        <div class="checkout-step-indicator active" id="step1Indicator">
+          <div class="checkout-step-number">1</div>
+          <span>Delivery Details</span>
+        </div>
+        <div class="checkout-step-indicator" id="step2Indicator">
+          <div class="checkout-step-number">2</div>
+          <span>Payment & Tip</span>
+        </div>
+        <div class="checkout-step-indicator" id="step3Indicator">
+          <div class="checkout-step-number">3</div>
+          <span>Order Confirmation</span>
+        </div>
+      </div>
+
+      <!-- Checkout Form Content -->
+      <div class="checkout-body" id="checkoutFormContent">
+        <form id="checkoutMasterForm">
+          <!-- Order Type Toggle -->
+          <div class="order-type-selector">
+            <button type="button" class="order-type-btn active" id="orderTypeDeliveryBtn">
+              <i class="fa-solid fa-motorcycle"></i> Priority Delivery (30 min)
+            </button>
+            <button type="button" class="order-type-btn" id="orderTypePickupBtn">
+              <i class="fa-solid fa-bag-shopping"></i> Kitchen Curbside Pickup
+            </button>
+          </div>
+
+          <!-- Customer details -->
+          <div class="reservation-form-grid" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label class="form-label" for="checkoutName">Full Name *</label>
+              <input type="text" id="checkoutName" class="form-control" placeholder="Eleanor Vance" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="checkoutPhone">Phone Number *</label>
+              <input type="tel" id="checkoutPhone" class="form-control" placeholder="(555) 000-0000" required>
+            </div>
+            <div class="form-group full-width" id="checkoutAddressField">
+              <label class="form-label" for="checkoutAddress">Delivery Street Address & Apt *</label>
+              <input type="text" id="checkoutAddress" class="form-control" placeholder="124 Park Avenue, Apt 4B" required>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="checkoutNotes">Special Instructions for Kitchen / Courier</label>
+              <input type="text" id="checkoutNotes" class="form-control" placeholder="Leave at concierge, ring buzzer 4B, extra napkins...">
+            </div>
+          </div>
+
+          <!-- Payment methods -->
+          <label class="form-label" style="display: block; margin-bottom: 0.6rem;">Select Payment Method</label>
+          <div class="payment-method-selector">
+            <div class="payment-option-btn active" data-method="card">
+              <i class="fa-regular fa-credit-card"></i>
+              <span>Credit Card</span>
+            </div>
+            <div class="payment-option-btn" data-method="applepay">
+              <i class="fa-brands fa-apple"></i>
+              <span>Apple / Google Pay</span>
+            </div>
+            <div class="payment-option-btn" data-method="cash">
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <span>Cash on Delivery</span>
+            </div>
+          </div>
+
+          <!-- Simulated Credit Card Input Fields -->
+          <div id="cardFieldsWrap" class="reservation-form-grid" style="margin-bottom: 1.5rem;">
+            <div class="form-group full-width">
+              <label class="form-label">Card Number</label>
+              <input type="text" class="form-control" id="cardNumberInput" placeholder="•••• •••• •••• 4242" maxlength="19" value="4242 •••• •••• 8821">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Expiration</label>
+              <input type="text" class="form-control" id="cardExpiryInput" placeholder="MM/YY" maxlength="5" value="08/28">
+            </div>
+            <div class="form-group">
+              <label class="form-label">CVC / CVV</label>
+              <input type="password" class="form-control" id="cardCvcInput" placeholder="•••" maxlength="4" value="789">
+            </div>
+          </div>
+
+          <!-- Tip Selector -->
+          <label class="form-label" style="display: block; margin-bottom: 0.6rem;">Staff & Courier Gratuity</label>
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <button type="button" class="btn btn-secondary btn-sm tip-btn" data-tip="10">10%</button>
+            <button type="button" class="btn btn-secondary btn-sm tip-btn active" data-tip="15">15% ($<span id="tip15Value"></span>)</button>
+            <button type="button" class="btn btn-secondary btn-sm tip-btn" data-tip="20">20%</button>
+            <button type="button" class="btn btn-secondary btn-sm tip-btn" data-tip="0">No Tip</button>
+          </div>
+
+          <!-- Order Summary Final Bar -->
+          <div style="background: var(--color-bg-tertiary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 0.85rem; color: var(--color-text-muted);">Amount to be charged:</div>
+              <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--color-gold-light);" id="checkoutFinalTotalDisplay">$0.00</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" id="submitOrderBtn">
+              <i class="fa-solid fa-lock"></i> Authorize & Place Order
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Live Order Tracker & Receipt Pane (Shown after checkout) -->
+      <div class="order-success-pane" id="orderSuccessContent" style="display: none;">
+        <div class="order-success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 id="checkoutSuccessTitle">Order Successfully Placed!</h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">Thank you, <span id="confirmedCustomerName" style="color: #fff; font-weight: 600;"></span>. Our culinary team has received your ticket.</p>
+        <div class="order-reference-code" id="confirmedOrderRef">SAV-84920</div>
+
+        <!-- 4-Stage Interactive Tracker -->
+        <div class="order-tracker">
+          <div class="tracker-node completed" id="trackNode1">
+            <div class="tracker-dot"><i class="fa-solid fa-clipboard-check"></i></div>
+            <div class="tracker-label">Order Placed</div>
+          </div>
+          <div class="tracker-node active" id="trackNode2">
+            <div class="tracker-dot"><i class="fa-solid fa-fire-burner"></i></div>
+            <div class="tracker-label">Kitchen Crafting</div>
+          </div>
+          <div class="tracker-node" id="trackNode3">
+            <div class="tracker-dot"><i class="fa-solid fa-motorcycle"></i></div>
+            <div class="tracker-label">Out for Delivery</div>
+          </div>
+          <div class="tracker-node" id="trackNode4">
+            <div class="tracker-dot"><i class="fa-solid fa-utensils"></i></div>
+            <div class="tracker-label">Bon Appétit</div>
+          </div>
+        </div>
+
+        <div style="background: var(--color-bg-tertiary); padding: 1.5rem; border-radius: var(--radius-md); text-align: left; margin: 1.5rem 0; border: 1px solid var(--color-border);">
+          <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.75rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Order Manifest</h4>
+          <div id="confirmedOrderItemsSummary" style="font-size: 0.88rem; color: var(--color-text-secondary); display: flex; flex-direction: column; gap: 0.4rem;"></div>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; font-weight: 700; color: #fff;">
+            <span>Total Paid</span>
+            <span id="confirmedOrderTotalDisplay" style="color: var(--color-gold-light);"></span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+          <button class="btn btn-primary" id="trackOrderSimulateStepBtn">
+            <i class="fa-solid fa-forward-step"></i> Simulate Next Step
+          </button>
+          <button class="btn btn-secondary" id="finishOrderCloseBtn">Back to Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TABLE RESERVATION CONFIRMATION MODAL ==================== -->
+  <div class="modal-overlay" id="reservationConfirmModal">
+    <div class="modal-container" style="max-width: 520px; text-align: center; padding: 2.5rem 2rem;" role="dialog" aria-modal="true" aria-labelledby="resSuccessTitle">
+      <button class="modal-close-btn" id="closeReservationConfirmBtn" aria-label="Close Dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="order-success-icon" style="background: rgba(212, 163, 89, 0.15); border-color: var(--color-gold); color: var(--color-gold-light);">
+        <i class="fa-solid fa-champagne-glasses"></i>
+      </div>
+
+      <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: #fff; margin-bottom: 0.5rem;" id="resSuccessTitle">Table Confirmed!</h3>
+      <p style="color: var(--color-text-secondary); margin-bottom: 1.25rem;">We eagerly anticipate welcoming you for an exceptional evening at Savoria.</p>
+
+      <div class="order-reference-code" id="resBookingCode">RES-94821</div>
+
+      <div style="background: var(--color-bg-tertiary); padding: 1.25rem; border-radius: var(--radius-md); text-align: left; font-size: 0.9rem; margin-bottom: 1.75rem; border: 1px solid var(--color-border);">
+        <div style="margin-bottom: 0.4rem;"><strong>Guest:</strong> <span id="resDetailName" style="color: var(--color-text-secondary);"></span></div>
+        <div style="margin-bottom: 0.4rem;"><strong>Date & Time:</strong> <span id="resDetailDateTime" style="color: var(--color-gold-light); font-weight: 600;"></span></div>
+        <div style="margin-bottom: 0.4rem;"><strong>Party Size:</strong> <span id="resDetailGuests" style="color: var(--color-text-secondary);"></span></div>
+        <div><strong>Seating Area:</strong> <span id="resDetailArea" style="color: var(--color-text-secondary);"></span></div>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%;" id="dismissResModalBtn">
+        <i class="fa-regular fa-calendar-plus"></i> Done
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION HOST -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- FLOATING BACK-TO-TOP BUTTON -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Application Scripts -->
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
